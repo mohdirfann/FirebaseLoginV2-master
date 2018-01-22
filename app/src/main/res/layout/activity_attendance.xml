@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    tools:context="com.example.afiqhbs.firebaseloginv2.AttendanceActivity"
+    android:weightSum="1">
+
+    <!-- Line with Latitude and Longitude -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp">
+
+        <!--Latitude-->
+        <TextView
+            android:id="@+id/lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_weight="0.5"
+            android:text="Lat: " />
+
+        <!--Longitude-->
+        <TextView
+            android:id="@+id/lon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_weight="0.5"
+            android:text="Long: " />
+    </LinearLayout>
+
+    <!--GoogleMap fragment-->
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="422dp"
+        android:layout_height="75dp"
+        android:layout_weight="1.92"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp">
+
+        <!--Latitude-->
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="84dp"
+            android:layout_marginStart="84dp"
+            android:enabled="false"
+            android:text="Clock In"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Clock Out"
+            android:layout_alignBaseline="@+id/button5"
+            android:layout_alignBottom="@+id/button5"
+            android:layout_alignLeft="@+id/button5"
+            android:layout_alignStart="@+id/button5"
+            android:layout_marginLeft="121dp"
+            android:layout_marginStart="121dp" />
+        <Button
+            android:id="@+id/buttonH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="View History"
+            android:layout_marginLeft="84dp"
+            android:layout_marginStart="84dp"/>
+
+        <Button
+            android:id="@+id/buttonR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@+id/buttonH"
+            android:layout_toRightOf="@+id/buttonH"
+            android:enabled="true"
+            android:text="Remarks" />
+
+    </RelativeLayout>
+
+</LinearLayout>
